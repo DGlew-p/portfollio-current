@@ -1,0 +1,242 @@
+.MuiAppBar-root{
+    height: 6.5rem;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    
+}
+
+.MuiAppBar-root.MuiPaper-root{
+    background-color: transparent !important;
+       box-shadow: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+}
+
+ .MuiPaper-root {
+     background-color: var(--secondary) !important;
+     border-top-right-radius: 40px;
+     border-bottom-right-radius: 40px;
+
+   
+ }
+
+
+.navbar--container {
+  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 3rem;
+    margin-top: 1rem;
+    
+
+}
+
+.nbc--content {
+
+    width: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 2em;
+    gap: .5em;
+
+
+}
+.navBar--extLink{
+    color: var(--secondary);
+    transition: 250ms ease-in-out;
+}
+
+.navBar--extLink:hover {
+    color: var(--tertiary);
+    transform: scale(1.2);
+}
+
+ .navMenu{
+    font-size:2.5rem;
+    color: var(--primary);
+    cursor: pointer;
+    transition: color 0.3s;
+ }
+.navMenu:hover{
+    color: var(--tertiary);
+}
+
+
+
+
+
+.MuiDrawer > .MuiBackdrop-root {
+    background: rgba(33, 33, 33, 0.30) !important;
+    backdrop-filter: blur(20px) !important;
+}
+
+
+.MuiDrawer-root{
+    overflow: hidden !important;
+    padding: 0em 1.8em !important;
+    width: 14em !important;
+    border-color: var(--tertiary)!important;
+    border-top-right-radius: 40px !important;
+    border-bottom-right-radius: 40px;    
+}
+
+.navLink--container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2em;
+    height: 100%;
+
+}
+
+.closebtnIcon{
+    font-size: 2rem !important;
+    cursor: pointer;
+    border: 3px solid var(--primary80);
+border-radius: 50%;
+
+    color: var(--primary);
+    position: absolute ;
+    right:30px !important;
+    top: 30px !important;
+    transition: color 0.2s; 
+}
+
+ .closebtnIcon:hover {
+    background-color: var(--tertiary);
+        color: var(--secondary);
+ }
+
+
+.drawerItem {
+
+    margin: 10% auto;
+    border-radius: 80px;
+    background:var(--secondary);
+    color: var(--primary);
+    width: 85%;
+    height: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0 30px;
+    box-sizing: border-box;
+    border: 3px solid var(--primary80);
+    transition: 0.2s;
+    
+}
+
+.drawerItem:hover {
+    background-color: var(--tertiary);
+        color: var(--secondary);
+   }
+
+
+.drawerLinks {
+
+    font-family: var(--primaryFont);
+   width:60%;
+    font-size: 1.2rem ;
+    font-weight: 600;
+    margin: .5em
+   
+}
+
+
+.drawerIcon {
+
+    font-size:1.6rem !important;
+  
+
+    
+}
+
+
+
+@media (max-width:1100px) {
+    .navbar--container {
+        padding: 0 2rem;
+    }
+
+    .navbar--container>h1 {
+        font-size: 2.2rem;
+    }
+
+    .nav-menu {
+        font-size: 2.2rem;
+        margin-top: -1.5rem;
+    }
+}
+
+@media (max-width:950px) {
+  
+        .navBar--extLink{
+            color: var(--primary);
+        }
+    .navLink--container {
+        margin-top: 3rem;
+        
+    }
+         .nav-menu {
+            color: var(--primary);
+         }
+  
+
+.MuiAppBar-root {
+   
+    height: 3rem;
+
+}
+        .MuiAppBar-root.MuiPaper-root {
+            background-color:var(--secondary) !important;
+            border-radius: 0%;
+        }
+
+        
+}
+
+
+@media (max-width:650px) {
+
+.navMenu {
+        font-size: 2rem;
+    
+        transition: color 0.3s;
+    }
+        .navMenu:hover {
+            color: var(--tertiary);
+        }
+
+    .MuiDrawer-paper {
+        border-radius: 0 !important;
+    }
+}
+
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) {
+    .navbar {
+        height: 5rem;
+    }
+
+    .navbar--container {
+        padding: 0 1rem;
+        margin-top: 0rem;
+    }
+
+    .navbar--container>h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-height:800px) {
+
+
+}
