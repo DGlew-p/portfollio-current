@@ -2,7 +2,8 @@
     height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;padding: ;
+    justify-content: center;
+ 
 
 }
 
@@ -54,7 +55,6 @@
 .landing--container-right {
     flex: 65%;
     height: 100%;
-    background-color: #eaeaea;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -113,7 +113,7 @@
     height: 50px;
     font-family: var(--primaryFont);
     border: 3px solid var(--primary) !important;
-    transition: 100ms ease-out;
+    transition: 250ms ease-out;
         }
         .landing--button:hover{
         background-color: var(--tertiary);

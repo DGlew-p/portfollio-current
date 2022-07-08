@@ -1,29 +1,38 @@
-.backToTop {
+.MuiBox-root {
     position: fixed;
-    right: 10px;
-    bottom: 60px;
-    height: 30px;
-    font-size: 3rem;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    right: 5%;
+    bottom: 10%;
+    width: 2.5em;
+    height: 2.5em;
+    background-color: var(--primary80);
+    border:2px solid var(--secondary70);
+    color: var(--tertiary);
+    border-radius: 50%;
     z-index: 999;
+    transition: 300ms ease-in-out;
 }
 
-.backToTop-icon{
-font-size: 3rem;
-color:var(--primary80);
+.MuiBox-root:hover{
+    color: var(--secondary);
+    background-color: var(--tertiary);
+
 }
 
-.backToTop button {
-    outline: none;
-    border: none;
-    cursor: pointer;
-    background: none;
-    padding: 15px;
-}
+
+
+
+
 
 @media screen and (max-width: 800px) {
-    .backToTop {
-        right: -10px;
-        bottom: 50px;
-        font-size: 2.75rem;
+    .MuiBox-root {
+     
+        right: 5%;
+        bottom: 5%;
+        width: 2em;
+        height: 2em;
+   
     }
 }

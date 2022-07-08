@@ -6,6 +6,7 @@
     justify-content: center;
     min-height: 50vh;
     padding: 2.5rem 2rem 2rem 2rem;
+    background-color: var(--secondary);
 }
 
 .skillsHeader {
@@ -32,7 +33,7 @@
     align-items: center;
     justify-content: center;
     width: 75%;
-    margin-top: 2em;
+    margin-top: 4em;
    
 }
 
@@ -40,8 +41,8 @@
 
 
 .skill--box {
- 
-    box-shadow: 0px 10px 20px var(--secondary);
+    background-color: var(--secondary);
+    box-shadow: 0px 0px 20px var(--primary80);
     border-radius: 10px;
     width: 125px;
     height: 125px;
@@ -67,7 +68,7 @@
     font-weight: 500;
     font-size: 1.5em;
     text-align: center;
-    color: var(--tertiary50);
+    color: var(--tertiary80);
    
 }
 
@@ -108,6 +109,8 @@
 
     .skillsContainer{
         margin-top: .25em;
+        width: 90%;
+        
     }
 
     .skill--box>img {
@@ -121,5 +124,11 @@
     .skill--box h3 {
         font-size: 18px;
         margin-top: 1rem;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .skillsContainer{
+        width: 100%;
     }
 }

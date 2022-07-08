@@ -1,15 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import ThemeContextProvider from "./context/ThemeContext";
 
 ReactDOM.render(
-  <ThemeContextProvider>
+  <React.StrictMode>
     <App />
-  </ThemeContextProvider>,
+  </React.StrictMode>,
   document.getElementById("root")
 );
 

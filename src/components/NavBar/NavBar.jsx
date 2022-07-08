@@ -1,18 +1,10 @@
-import React, { useContext, useState } from "react";
-import { NavHashLink, HashLink } from "react-router-hash-link";
-// import { NavLink } from "react-router-dom";
+import React, { useState } from "react";
+import { HashLink } from "react-router-hash-link";
+
 import { IoMenuSharp, IoSchoolSharp } from "react-icons/io5";
-import { HiDocumentText } from "react-icons/hi";
-import { BsFillGearFill } from "react-icons/bs";
 import { BsBriefcase } from "react-icons/bs";
 import { MdConnectWithoutContact } from "react-icons/md";
-import {
-  FaUser,
-  FaFolderOpen,
-  FaLinkedin,
-  FaGithub,
-  FaCode,
-} from "react-icons/fa";
+import { FaUser, FaLinkedin, FaGithub, FaCode } from "react-icons/fa";
 
 import { Drawer, AppBar } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
@@ -82,13 +74,6 @@ export default function Navbar() {
         </div>
 
         <div className='navLink--container' onClick={handleDrawerClose}>
-          {/* <HashLink to='/'>
-            <div className='drawerItem'>
-              <IoHomeSharp className='drawerIcon' />
-              <span className='drawerLinks'>Home</span>
-            </div>
-          </HashLink> */}
-
           <HashLink smooth to='/#about'>
             <div className='drawerItem'>
               <FaUser className='drawerIcon' />
@@ -114,13 +99,6 @@ export default function Navbar() {
             <div className='drawerItem'>
               <IoSchoolSharp className='drawerIcon' />
               <span className='drawerLinks'>Education</span>
-            </div>
-          </HashLink>
-
-          <HashLink smooth to='/#experience'>
-            <div className='drawerItem'>
-              <HiDocumentText className='drawerIcon' />
-              <span className='drawerLinks'>Experience</span>
             </div>
           </HashLink>
 

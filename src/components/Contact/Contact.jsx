@@ -5,7 +5,7 @@ import { FaLinkedinIn, FaGithub, FaWindowClose } from "react-icons/fa";
 import { AiOutlineSend, AiOutlineCheckCircle } from "react-icons/ai";
 import { FiPhone, FiAtSign } from "react-icons/fi";
 import { HiOutlineLocationMarker } from "react-icons/hi";
-
+import { CircularProgress, Box } from "@mui/material";
 import { extLinkData, contactsData } from "../../data";
 
 import "./Contact.css";
@@ -15,18 +15,26 @@ export default function Contact() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [emailSuccess, setEmailSuccess] = useState(null);
-
+  const [errorCount, setErrorCount] = useState({
+    senderName: true,
+    email: true,
+    message: true,
+  });
   const [loading, setLoading] = useState(false);
 
   const { enqueueSnackbar, closeSnackbar } = useSnackbar();
 
-  function openMessage(msgString, id) {
-    const action = (id) => (
+  function openMessage(msgString, key) {
+    setErrorCount({
+      ...errorCount,
+      [key]: true,
+    });
+    const action = (key) => (
       <div>
         <button
           className='snackbar-close'
           onClick={() => {
-            closeSnackbar(id);
+            closeSnackbar(key);
           }}>
           <FaWindowClose />
         </button>
@@ -36,12 +44,17 @@ export default function Contact() {
       variant: "warning",
       persist: true,
       preventDuplicate: true,
-      key: id,
+      key: key,
       action,
     });
   }
 
   function noErrorMessage(key) {
+    setErrorCount({
+      ...errorCount,
+      [key]: false,
+    });
+
     closeSnackbar(key);
   }
 
@@ -54,8 +67,9 @@ export default function Contact() {
     );
 
     let errorMessage = null;
+
     switch (name) {
-      case "name":
+      case "senderName":
         setName(value);
         errorMessage =
           value.length < 3
@@ -87,7 +101,7 @@ export default function Contact() {
     e.preventDefault(e);
     setLoading(true);
 
-    const fetchResponse = fetch("/route/send", {
+    fetch("https://mail-test-back.herokuapp.com/route/send", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -106,14 +120,15 @@ export default function Contact() {
         return res.json();
       })
       .then(
-        (fetchResponse) => {
+        (success) => {
           console.log("fetch success");
-          console.log(fetchResponse.json());
+          console.log(success);
           setEmailSuccess(true);
           setLoading(false);
         },
-        (err) => {
+        (error) => {
           console.log("fetch fail");
+          console.log(error);
           setEmailSuccess(false);
           setLoading(false);
           openMessage(
@@ -140,7 +155,7 @@ export default function Contact() {
                   value={name}
                   onChange={(e) => handleChange(e)}
                   type='text'
-                  name='name'
+                  name='senderName'
                   className={"form-input"}
                 />
               </div>
@@ -176,7 +191,16 @@ export default function Contact() {
                   type='submit'
                   className={""}
                   onClick={(e) => handleSubmit(e)}>
-                  <p>{!emailSuccess ? "Send" : "Sent"}</p>
+                  {loading ? (
+                    <CircularProgress
+                      className='circular-progress'
+                      size='1.75rem'
+                      sx={{
+                        color: "#212121",
+                      }}></CircularProgress>
+                  ) : (
+                    <p>{!emailSuccess ? "Send" : "Sent"}</p>
+                  )}
                   <div className='submit-icon'>
                     <AiOutlineSend
                       className='send-icon'

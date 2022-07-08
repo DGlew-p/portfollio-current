@@ -1,25 +1,17 @@
-import React, { useContext } from "react";
-import { ButtonBase, Button } from "@mui/material";
+import React from "react";
+import { ButtonBase } from "@mui/material";
 import { NavHashLink } from "react-router-hash-link";
 
 import "./Landing.css";
-import { ThemeContext } from "../../context/ThemeContext";
+
 import { headerData } from "../../data/headerData";
 
 export default function Landing() {
-  const { drawerOpen } = useContext(ThemeContext);
   return (
     <div className='landing' id='back-to-top-anchor'>
       <div className='landing--container'>
         <div className='landing--container-left'></div>
-        <img
-          src={headerData.image}
-          alt=''
-          className='landing--img'
-          style={{
-            opacity: `${drawerOpen ? "0" : "1"}`,
-          }}
-        />
+        <img src={headerData.image} alt='' className='landing--img' />
         <div className='landing--container-right'>
           <div className='lcr--content'>
             <h6>{headerData.title}</h6>

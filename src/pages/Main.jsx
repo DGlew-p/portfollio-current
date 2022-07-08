@@ -7,7 +7,6 @@ import {
   About,
   Skills,
   Education,
-  Experience,
   Contact,
   Projects,
 } from "../components";
@@ -21,8 +20,6 @@ export default function Main() {
       <Projects />
       <Skills />
       <Education />
-      <Experience />
-
       <Contact />
       <Footer />
     </>

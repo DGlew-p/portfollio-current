@@ -1,29 +1,17 @@
-import React, { useContext } from "react";
+import React from "react";
 
-import Box from "@mui/material/Box";
-import { ThemeContext } from "../../context/ThemeContext";
 import { skillsData } from "../../data/skillsData";
-// import { skillsImage } from "../../utils/skillsImage";
+
 import "./Skills.css";
 export default function Skills() {
-  const { theme } = useContext(ThemeContext);
-
-  const skillBoxStyle = {
-    backgroundColor: theme.secondary,
-    boxShadow: `0px 0px 30px ${theme.primary30}`,
-  };
-
   return (
-    <div
-      className='skills'
-      id='skills'
-      style={{ backgroundColor: theme.secondary }}>
+    <div className='skills' id='skills'>
       <div className='skillsHeader'>
-        <h2 style={{ color: theme.primary }}>Skills</h2>
+        <h2>Skills</h2>
       </div>
       <div className='skillsContainer'>
         {skillsData.map((skill, id) => (
-          <div className='skill--box' key={id} style={skillBoxStyle}>
+          <div className='skill--box' key={id}>
             <h3>{skill}</h3>
           </div>
         ))}

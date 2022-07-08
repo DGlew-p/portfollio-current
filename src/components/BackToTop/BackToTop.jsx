@@ -1,15 +1,11 @@
 import "./BackToTop.css";
 import * as React from "react";
 
-import useScrollTrigger from "@mui/material/useScrollTrigger";
-import Box from "@mui/material/Box";
+import { useScrollTrigger, Box, Fab, Zoom } from "@mui/material";
 
-import Fab from "@mui/material/Fab";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
-import Fade from "@mui/material/Fade";
 
-function ScrollTop(props) {
-  const { children } = props;
+export default function ScrollTop(props) {
   const trigger = useScrollTrigger({
     disableHysteresis: true,
     threshold: 100,
@@ -29,23 +25,12 @@ function ScrollTop(props) {
   };
 
   return (
-    <Fade in={trigger}>
-      <Box
-        onClick={handleClick}
-        role='presentation'
-        sx={{ position: "fixed", bottom: 16, right: 16 }}>
-        {children}
-      </Box>
-    </Fade>
-  );
-}
-
-export default function BackToTop(...props) {
-  return (
-    <ScrollTop {...props}>
-      <Fab size='small' aria-label='scroll back to top'>
+    <Zoom in={trigger}>
+      <Box onClick={handleClick} className={"BackToTop"} role='presentation'>
+        {/* <Fab size='small' aria-label='scroll back to top'> */}
         <KeyboardArrowUpIcon />
-      </Fab>
-    </ScrollTop>
+        {/* </Fab> */}
+      </Box>
+    </Zoom>
   );
 }
