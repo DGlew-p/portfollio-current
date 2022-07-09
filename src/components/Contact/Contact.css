@@ -249,15 +249,16 @@ form>.send--btn:disabled{
 
   
 .snackbar-close {
+    display: flex;
     color: inherit;
     background-color: inherit;
     border: none;
+    align-items: center;
 }
 
-.circular-progress{
-    color: var(--secondary);
-    height:1rem
-}
+
+
+
 
 @media screen and (max-width: 992px) {
 

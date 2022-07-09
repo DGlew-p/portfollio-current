@@ -14,9 +14,15 @@ export default function App() {
           vertical: "top",
           horizontal: "center",
         }}
+        style={{
+          fontSize: "1rem",
+          padding: "1px 10px",
+          fontWeight: "600",
+          display: "flex",
+          alignItems: "center",
+        }}
         TransitionComponent={Grow}
         hideIconVariant
-        dense
         preventDuplicate>
         <Router>
           <Routes>

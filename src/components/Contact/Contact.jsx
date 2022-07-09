@@ -3,13 +3,11 @@ import React, { useState } from "react";
 import { useSnackbar } from "notistack";
 import { FaLinkedinIn, FaGithub, FaWindowClose } from "react-icons/fa";
 import { AiOutlineSend, AiOutlineCheckCircle } from "react-icons/ai";
-import { FiPhone, FiAtSign } from "react-icons/fi";
-import { HiOutlineLocationMarker } from "react-icons/hi";
 import { CircularProgress, ButtonBase } from "@mui/material";
-import { extLinkData, contactsData } from "../../data";
-
+import { extLinkData } from "../../data";
+import { HistoryEdu } from "@mui/icons-material";
 import "./Contact.css";
-
+import { headerData } from "../../data/headerData";
 export default function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -134,7 +132,12 @@ export default function Contact() {
           setEmailSuccess(false);
           setLoading(false);
           openMessage(
-            "Something went Wrong. Please message me on LinkedIn",
+            <a
+              href={extLinkData.linkedIn}
+              target='blank'
+              title='Link to my LinkedIn page'>
+              Something went Wrong. Please message me on <u>LinkedIn</u>
+            </a>,
             "email"
           );
         }
@@ -197,9 +200,12 @@ export default function Contact() {
                 {loading ? (
                   <CircularProgress
                     className='circular-progress'
-                    size='1.75rem'
+                    size='2.25rem'
                     sx={{
-                      color: "#212121",
+                      color: "inherit",
+                      "&:hover": {
+                        color: "inherit",
+                      },
                     }}></CircularProgress>
                 ) : (
                   <p>{!emailSuccess ? "Send" : "Sent"}</p>
@@ -226,48 +232,24 @@ export default function Contact() {
             </form>
           </div>
           <div className='contacts-details'>
-            <a
-              href={`mailto:${contactsData.email}`}
-              className='personal-details'>
+            <a href={extLinkData.linkedIn} className='personal-details'>
               <div className={"detailsIcon"}>
-                <FiAtSign />
+                <FaLinkedinIn aria-label='LinkedIn' />
               </div>
-              <p>{contactsData.email}</p>
+              <p>{extLinkData.linkedIn}</p>
             </a>
-            <a href={`tel:${contactsData.phone}`} className='personal-details'>
+            <a href={extLinkData.github} className='personal-details'>
               <div className={"detailsIcon"}>
-                <FiPhone />
+                <FaGithub aria-label='GitHub' />
               </div>
-              <p>{contactsData.phone}</p>
+              <p>{extLinkData.github}</p>
             </a>
-            <div className='personal-details'>
+            <a href={headerData.resumePdf} className='personal-details'>
               <div className={"detailsIcon"}>
-                <HiOutlineLocationMarker />
+                <HistoryEdu />
               </div>
-              <p>{contactsData.address}</p>
-            </div>
-
-            <div className='socialmedia-icons'>
-              {extLinkData.github && (
-                <a
-                  href={extLinkData.github}
-                  target='_blank'
-                  rel='noreferrer'
-                  className={"socialIcon"}>
-                  <FaGithub aria-label='GitHub' />
-                </a>
-              )}
-
-              {extLinkData.linkedIn && (
-                <a
-                  href={extLinkData.github}
-                  target='_blank'
-                  rel='noreferrer'
-                  className={"socialIcon"}>
-                  <FaLinkedinIn aria-label='GitHub' />
-                </a>
-              )}
-            </div>
+              <p>C.V</p>
+            </a>
           </div>
         </div>
       </div>

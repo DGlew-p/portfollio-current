@@ -41,6 +41,11 @@ a {
   color: var(--primary);
 }
 
+.SnackbarItem-message>a{
+  color: #fff !important;
+
+}
+
 
 
 
