@@ -5,7 +5,7 @@ import { FaLinkedinIn, FaGithub, FaWindowClose } from "react-icons/fa";
 import { AiOutlineSend, AiOutlineCheckCircle } from "react-icons/ai";
 import { FiPhone, FiAtSign } from "react-icons/fi";
 import { HiOutlineLocationMarker } from "react-icons/hi";
-import { CircularProgress, Box } from "@mui/material";
+import { CircularProgress, ButtonBase } from "@mui/material";
 import { extLinkData, contactsData } from "../../data";
 
 import "./Contact.css";
@@ -50,9 +50,10 @@ export default function Contact() {
   }
 
   function noErrorMessage(key) {
-    setErrorCount({
-      ...errorCount,
-      [key]: false,
+    setErrorCount((errorCount) => {
+      const countCopy = { ...errorCount };
+      delete countCopy[key];
+      return countCopy;
     });
 
     closeSnackbar(key);
@@ -95,6 +96,7 @@ export default function Contact() {
       default:
         break;
     }
+    console.log("ERROR count " + Object.values(errorCount).length);
   };
 
   const handleSubmit = async (e) => {
@@ -186,41 +188,41 @@ export default function Contact() {
                 />
               </div>
 
-              <div className='submit-btn'>
-                <button
-                  type='submit'
-                  className={""}
-                  onClick={(e) => handleSubmit(e)}>
-                  {loading ? (
-                    <CircularProgress
-                      className='circular-progress'
-                      size='1.75rem'
-                      sx={{
-                        color: "#212121",
-                      }}></CircularProgress>
-                  ) : (
-                    <p>{!emailSuccess ? "Send" : "Sent"}</p>
-                  )}
-                  <div className='submit-icon'>
-                    <AiOutlineSend
-                      className='send-icon'
-                      style={{
-                        animation: !emailSuccess
-                          ? "initial"
-                          : "fly 0.8s linear both",
-                        position: emailSuccess ? "absolute" : "initial",
-                      }}
-                    />
-                    <AiOutlineCheckCircle
-                      className='success-icon'
-                      style={{
-                        display: emailSuccess ? "none" : "inline-flex",
-                        opacity: !emailSuccess ? "0" : "1",
-                      }}
-                    />
-                  </div>
-                </button>
-              </div>
+              <ButtonBase
+                type='submit'
+                disabled={Object.values(errorCount).length > 0 ? true : false}
+                centerRipple={true}
+                className={"send--btn"}
+                onClick={(e) => handleSubmit(e)}>
+                {loading ? (
+                  <CircularProgress
+                    className='circular-progress'
+                    size='1.75rem'
+                    sx={{
+                      color: "#212121",
+                    }}></CircularProgress>
+                ) : (
+                  <p>{!emailSuccess ? "Send" : "Sent"}</p>
+                )}
+                <div className='submit-icon'>
+                  <AiOutlineSend
+                    className='send-icon'
+                    style={{
+                      animation: !emailSuccess
+                        ? "initial"
+                        : "fly 0.8s linear both",
+                      position: emailSuccess ? "absolute" : "initial",
+                    }}
+                  />
+                  <AiOutlineCheckCircle
+                    className='success-icon'
+                    style={{
+                      display: emailSuccess ? "none" : "inline-flex",
+                      opacity: !emailSuccess ? "0" : "1",
+                    }}
+                  />
+                </div>
+              </ButtonBase>
             </form>
           </div>
           <div className='contacts-details'>
