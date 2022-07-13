@@ -1,16 +1,15 @@
 export const educationData = [
   {
     id: 1,
-    school: "Marble Hills Middle School",
-    course: "Higher Secondary Education",
-    startYear: "2007",
-    endYear: "2015",
+    school: "General Assembly",
+    course: "Software Engineering Immersive",
+    startYear: "MAY 2021 - ",
+    endYear: "AUGUST 2021",
   },
   {
     id: 2,
-    school: "Somerset School of Science",
-    course: "Bachelor of Technology",
-    startYear: "2015",
-    endYear: "2019",
+    school: "General Assembly",
+    course: "Product Management Boot-camp",
+    startYear: "AUGUST 2021",
   },
 ];

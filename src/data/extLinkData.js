@@ -1,5 +1,5 @@
 export const extLinkData = {
-  github: "https://github.com/",
-  facebook: "https://www.facebook.com/",
-  linkedIn: "https://www.linkedin.com/in",
+  github: "https://github.com/DGlew-p",
+
+  linkedIn: "https://www.linkedin.com/in/darren-glew/",
 };

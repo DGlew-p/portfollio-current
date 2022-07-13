@@ -22,27 +22,46 @@
   box-sizing: border-box;
     --primaryFont: 'Poppins', sans-serif;
       --primary: #B6B6B6;
-      --primary400: #B6B6B6;
+      --primary-back-ground: #b6b6b6d4;
       --primary600: #B6B6B6;
       --primary80: #B6B6B6cc;
       --primary50: #B6B6B680;
       --primary30: #B6B6B64d;
-      --secondary: #212121;
+      --secondary: #212121e8;
       --secondary70: #212121b3;
-      --secondary50: #21212180;
+      --secondary50: #21212103;
       --tertiary: #eaeaea;
       --tertiary80: #eaeaeacc;
       --tertiary70: #eaeaeab3;
       --tertiary50: #eaeaea80;
 }
 
+.app{
+  background-color: #fce3aa;
+  z-index: -1;
+  opacity: 0.9;
+  background-image: repeating-radial-gradient(circle at 0 0, transparent 0,#fce3aa 10px),
+    repeating-linear-gradient(#444cf755, #fce3aa);}
+    
+
+
 a {
   text-decoration: none;
   color: var(--primary);
 }
 
-.SnackbarItem-message>a{
+.SnackbarItem-message>a {
   color: #fff !important;
+
+}
+
+.snackbar-close {
+  display: inline-flex;
+  color: inherit;
+  background-color: inherit;
+  border: none;
+  align-items: center;
+  padding: 0.5rem;
 
 }
 

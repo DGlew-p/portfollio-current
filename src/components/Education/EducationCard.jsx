@@ -4,7 +4,7 @@ import "./Education.css";
 
 export default function EducationCard({
   id,
-  institution,
+  school,
   course,
   startYear,
   endYear,
@@ -14,10 +14,11 @@ export default function EducationCard({
       <div className='educard-img'></div>
       <div className='education-details'>
         <h6>
-          {startYear}-{endYear}
+          {startYear}
+          {endYear}
         </h6>
         <h4>{course}</h4>
-        <h5>{institution}</h5>
+        <h5>{school}</h5>
       </div>
     </div>
   );

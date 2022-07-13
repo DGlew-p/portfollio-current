@@ -1,8 +1,8 @@
 export const aboutData = {
   title: "Who I am",
   description1:
-    "My name's Jane. I'm a web designer and developer based in Southampton, UK.",
+    "After deciding on a skill-set in software development to satisfy a lifelong passion for problem-solving and system-building, my journey, so far, has been one of continual learning and an increasing passion for the craft.",
   description2:
-    "During the day I work as a lead developer at a local agency and in the evening I  work on freelance projects and utilize the time to built my own products. I spent my leisure hours writing articles and poetry. Right now I'm also trying a hand at machine learning and AI. I love to learn and explore new arenas.",
-  image: 2,
+    "Coming from a career in hospitality, I developed the culinary systems and teams to grow a  boutique hotel restaurant into a group of 7 operations. The lessons learned in; creativity, collaboration and the necessity for continual improvement have been invaluable in my new direction.",
+  description3: `I'm looking for opportunities, short-term or long, to solve real-world problems and continue my progress on this exciting path. I am confident that the skills gained and experience I've had will be a valuable asset to any project I take on in the future.`,
 };

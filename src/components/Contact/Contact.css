@@ -19,6 +19,7 @@
     width: 75%;
     height: 100%;
     margin-top: 5%;
+   
 }
 
 .contacts--container>h1 {
@@ -199,35 +200,6 @@ form>.send--btn:disabled{
     width: 100%;
 }
 
-.socialmedia-icons {
-    width: 90%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-top: 4rem;
-}
-
-.socialIcon {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 21px;
-    background-color:var(--primary);
-    color: var(--secondary);
-    transition: 250ms ease-in-out;
-   }
-    .socialIcon:hover{
-        transform: scale(1.1);
-        color: var(--secondary);
-        background-color: var(--tertiary);
-    }
-   
-   
 .detailsIcon {
     background-color: var(--primary);
     color: var(--secondary);
@@ -248,15 +220,21 @@ form>.send--btn:disabled{
     }
 
   
-.snackbar-close {
-    display: flex;
+/* .snackbar-close {
+    display:inline-flex;
     color: inherit;
     background-color: inherit;
     border: none;
     align-items: center;
+    padding: 0.5rem;
+   
+} */
+
+@media screen and (max-width: 1200px){
+    .contacts-details {
+            padding-left: 3rem;
+        }
 }
-
-
 
 
 
@@ -272,9 +250,7 @@ form>.send--btn:disabled{
      
     }
 
-    .contacts-details {
-        padding-left: 4rem;
-    }
+    
 
 
 }
@@ -316,12 +292,6 @@ form>.send--btn:disabled{
         padding-left: 0rem;
         padding: 1rem;
         align-items: center;
-        margin-top: 2rem;
-    }
-
-    .socialmedia-icons {
-        width: 100%;
-        gap: 1.5rem;
         margin-top: 2rem;
     }
 

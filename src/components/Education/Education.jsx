@@ -15,7 +15,7 @@ export default function Education() {
             <EducationCard
               key={edu.id}
               id={edu.id}
-              institution={edu.institution}
+              school={edu.school}
               course={edu.course}
               startYear={edu.startYear}
               endYear={edu.endYear}

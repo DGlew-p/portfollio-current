@@ -20,6 +20,9 @@ export default function About() {
             <br />
             <br />
             {aboutData.description2}
+            <br />
+            <br />
+            {aboutData.description3}
           </p>
         </div>
       </div>

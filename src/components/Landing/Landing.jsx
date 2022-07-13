@@ -4,24 +4,24 @@ import { NavHashLink } from "react-router-hash-link";
 
 import "./Landing.css";
 
-import { headerData } from "../../data/headerData";
+import { landingData } from "../../data/landingData";
 
 export default function Landing() {
   return (
     <div className='landing' id='back-to-top-anchor'>
       <div className='landing--container'>
         <div className='landing--container-left'></div>
-        <img src={headerData.image} alt='' className='landing--img' />
+        <img src={landingData.image} alt='' className='landing--img' />
         <div className='landing--container-right'>
           <div className='lcr--content'>
-            <h6>{headerData.title}</h6>
-            <h1>{headerData.name}</h1>
-            <p>{headerData.desciption}</p>
+            <h6>{landingData.title}</h6>
+            <h1>{landingData.name}</h1>
+            <p>{landingData.desciption}</p>
 
             <div className='lcr-buttonContainer'>
-              {headerData.resumePdf && (
+              {landingData.resumePdf && (
                 <a
-                  href={headerData.resumePdf}
+                  href={landingData.resumePdf}
                   download='resume'
                   target='_blank'
                   rel='noreferrer'>

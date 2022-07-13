@@ -1,7 +1,7 @@
 import "./BackToTop.css";
 import * as React from "react";
 
-import { useScrollTrigger, Box, Fab, Zoom } from "@mui/material";
+import { useScrollTrigger, Box, Zoom } from "@mui/material";
 
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 
@@ -27,9 +27,7 @@ export default function ScrollTop(props) {
   return (
     <Zoom in={trigger}>
       <Box onClick={handleClick} className={"BackToTop"} role='presentation'>
-        {/* <Fab size='small' aria-label='scroll back to top'> */}
-        <KeyboardArrowUpIcon />
-        {/* </Fab> */}
+        <KeyboardArrowUpIcon size='small' aria-label='scroll back to top' />
       </Box>
     </Zoom>
   );

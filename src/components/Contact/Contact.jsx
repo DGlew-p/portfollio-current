@@ -7,7 +7,7 @@ import { CircularProgress, ButtonBase } from "@mui/material";
 import { extLinkData } from "../../data";
 import { HistoryEdu } from "@mui/icons-material";
 import "./Contact.css";
-import { headerData } from "../../data/headerData";
+import { landingData } from "../../data/landingData";
 export default function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -94,14 +94,13 @@ export default function Contact() {
       default:
         break;
     }
-    console.log("ERROR count " + Object.values(errorCount).length);
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault(e);
     setLoading(true);
 
-    fetch("https://mail-test-back.herokuapp.com/route/send", {
+    fetch("https://express-email-dg.herokuapp.com", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -232,19 +231,28 @@ export default function Contact() {
             </form>
           </div>
           <div className='contacts-details'>
-            <a href={extLinkData.linkedIn} className='personal-details'>
+            <a
+              href={extLinkData.linkedIn}
+              className='personal-details'
+              target={"blank"}>
               <div className={"detailsIcon"}>
                 <FaLinkedinIn aria-label='LinkedIn' />
               </div>
-              <p>{extLinkData.linkedIn}</p>
+              <p>LinkedIn</p>
             </a>
-            <a href={extLinkData.github} className='personal-details'>
+            <a
+              href={extLinkData.github}
+              className='personal-details'
+              target={"blank"}>
               <div className={"detailsIcon"}>
                 <FaGithub aria-label='GitHub' />
               </div>
-              <p>{extLinkData.github}</p>
+              <p>GitHub</p>
             </a>
-            <a href={headerData.resumePdf} className='personal-details'>
+            <a
+              href={landingData.resumePdf}
+              className='personal-details'
+              target={"blank"}>
               <div className={"detailsIcon"}>
                 <HistoryEdu />
               </div>

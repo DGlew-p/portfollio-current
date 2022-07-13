@@ -74,7 +74,7 @@
 
 
 .MuiDrawer > .MuiBackdrop-root {
-    background: rgba(33, 33, 33, 0.30) !important;
+    background: #21212103!important;
     backdrop-filter: blur(20px) !important;
 }
 
@@ -83,7 +83,7 @@
     overflow: hidden !important;
     padding: 0em 1.8em !important;
     width: 14em !important;
-    border-color: var(--tertiary)!important;
+   
     border-top-right-radius: 40px !important;
     border-bottom-right-radius: 40px;    
 }
@@ -120,7 +120,7 @@ border-radius: 50%;
 
     margin: 10% auto;
     border-radius: 80px;
-    background:var(--secondary);
+    /* background:var(--secondary); */
     color: var(--primary);
     width: 85%;
     height: 65%;

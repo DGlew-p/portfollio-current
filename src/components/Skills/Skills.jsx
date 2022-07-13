@@ -1,6 +1,7 @@
 import React from "react";
 
 import { skillsData } from "../../data/skillsData";
+import { skillsIcon } from "../../data/iconData";
 
 import "./Skills.css";
 export default function Skills() {
@@ -13,6 +14,7 @@ export default function Skills() {
         {skillsData.map((skill, id) => (
           <div className='skill--box' key={id}>
             <h3>{skill}</h3>
+            <div className='skill--icon'>{skillsIcon(skill)}</div>
           </div>
         ))}
       </div>
