@@ -100,7 +100,7 @@ export default function Contact() {
     e.preventDefault(e);
     setLoading(true);
 
-    fetch("http://localhost:3001/route/send", {
+    fetch("https://express-email-dg.herokuapp.com/route/send", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
