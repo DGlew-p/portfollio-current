@@ -220,15 +220,7 @@ form>.send--btn:disabled{
     }
 
   
-/* .snackbar-close {
-    display:inline-flex;
-    color: inherit;
-    background-color: inherit;
-    border: none;
-    align-items: center;
-    padding: 0.5rem;
-   
-} */
+
 
 @media screen and (max-width: 1200px){
     .contacts-details {
