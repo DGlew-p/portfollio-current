@@ -1,12 +1,19 @@
 import React from "react";
 import { ButtonBase } from "@mui/material";
-import { NavHashLink } from "react-router-hash-link";
 
 import "./Landing.css";
-
+import { scroller, Link } from "react-scroll";
 import { landingData } from "../../data/landingData";
 
 export default function Landing() {
+  // eslint-disable-next-line
+  const scrollTo = () => {
+    scroller.scrollTo("scroll-to-element", {
+      duration: 300,
+      delay: 0,
+      smooth: "easeInQuart",
+    });
+  };
   return (
     <div className='landing' id='back-to-top-anchor'>
       <div className='landing--container'>
@@ -30,13 +37,9 @@ export default function Landing() {
                   </ButtonBase>
                 </a>
               )}
-              <NavHashLink
-                to='/#contacts'
-                smooth={true}
-                spy='true'
-                duration={2000}>
+              <Link to='contacts' smooth={true}>
                 <ButtonBase className={"landing--button"}>Contact</ButtonBase>
-              </NavHashLink>
+              </Link>
             </div>
           </div>
         </div>

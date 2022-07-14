@@ -169,7 +169,7 @@ form>.send--btn:disabled{
 }
 
 .label {
-    background-color: var(--secondary);
+    background-color: var(--secondary70);
     color: var(--tertiary70);
     font-family: var(--primaryFont);
     font-weight: 600;
