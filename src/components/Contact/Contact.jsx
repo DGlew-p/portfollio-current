@@ -100,7 +100,7 @@ export default function Contact() {
     e.preventDefault(e);
     setLoading(true);
 
-    fetch("https://express-email-dg.herokuapp.com/route/send", {
+    fetch("http://localhost:3001/route/send", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -116,6 +116,7 @@ export default function Contact() {
         if (res.status >= 400) {
           throw new Error("Server Error");
         }
+
         return res.json();
       })
       .then(
@@ -128,6 +129,8 @@ export default function Contact() {
         (error) => {
           console.log("fetch fail");
           console.log(error);
+          console.log("body" + error.body);
+
           setEmailSuccess(false);
           setLoading(false);
           openMessage(
