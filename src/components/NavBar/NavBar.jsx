@@ -7,7 +7,7 @@ import { FaUser, FaLinkedin, FaGithub, FaCode } from "react-icons/fa";
 import Hide from "./HideLinkOnScroll.jsx";
 import { Drawer, AppBar } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
-import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
+import { CgHome } from "react-icons/cg";
 import "./NavBar.css";
 import { extLinkData } from "../../data/extLinkData";
 
@@ -60,7 +60,7 @@ export default function Navbar(props) {
             handleDrawerClose();
           }
         }}
-        anchor='left'
+        anchor='right'
         open={open}
         className='MuiDrawer'
         disableScrollLock={true}
@@ -84,47 +84,43 @@ export default function Navbar(props) {
         <div className='navLink--container'>
           <Link onClick={handleDrawerClose} to='landing' smooth={true}>
             <div className='drawerItem'>
-              <div className={"BackToTop"} role='presentation'>
-                <KeyboardArrowUpIcon
-                  size='large'
-                  aria-label='scroll back to top'
-                />
-              </div>
+              <span className='drawerLinks'>Home</span>
+              <CgHome className='drawerIcon' aria-label='scroll back to home' />
             </div>
           </Link>
 
           <Link onClick={handleDrawerClose} to='about' smooth={true}>
             <div className='drawerItem'>
-              <FaUser className='drawerIcon' />
               <span className='drawerLinks'>About</span>
+              <FaUser className='drawerIcon' />
             </div>
           </Link>
 
           <Link onClick={handleDrawerClose} to='projects' smooth={true}>
             <div className='drawerItem'>
-              <BsBriefcase className='drawerIcon' />
               <span className='drawerLinks'>Projects</span>
+              <BsBriefcase className='drawerIcon' />
             </div>
           </Link>
 
           <Link onClick={handleDrawerClose} to='skills' smooth={true}>
             <div className='drawerItem'>
-              <FaCode className='drawerIcon' />
               <span className='drawerLinks'>Skills</span>
+              <FaCode className='drawerIcon' />
             </div>
           </Link>
 
           <Link onClick={handleDrawerClose} to='education' smooth={true}>
             <div className='drawerItem'>
-              <IoSchoolSharp className='drawerIcon' />
               <span className='drawerLinks'>Education</span>
+              <IoSchoolSharp className='drawerIcon' />
             </div>
           </Link>
 
           <Link onClick={handleDrawerClose} to='contacts' smooth={true}>
             <div className='drawerItem'>
-              <MdConnectWithoutContact className='drawerIcon' />
               <span className='drawerLinks'>Contact</span>
+              <MdConnectWithoutContact className='drawerIcon' />
             </div>
           </Link>
         </div>

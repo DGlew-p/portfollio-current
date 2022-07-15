@@ -20,12 +20,14 @@ import {
 
 import { AiOutlineSend, AiOutlineCheckCircle } from "react-icons/ai";
 
-export const iconData = {
+import { GrHomeRounded } from "react-icons/gr";
+export const iconData = [
   AiOutlineSend,
   AiOutlineCheckCircle,
   FaLinkedinIn,
   FaWindowClose,
-};
+  GrHomeRounded,
+];
 
 export const skillsIcon = (skill) => {
   const skillIconID = skill;

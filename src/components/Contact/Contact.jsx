@@ -157,7 +157,7 @@ export default function Contact() {
             <form onSubmit={handleSubmit}>
               <div className='input-container'>
                 <label htmlFor='Name' className={"label"}>
-                  Name
+                  Name*
                 </label>
                 <input
                   placeholder='A Name'
@@ -170,7 +170,7 @@ export default function Contact() {
               </div>
               <div className='input-container'>
                 <label htmlFor='Email' className={"label"}>
-                  Email
+                  Email*
                 </label>
                 <input
                   placeholder='Avery@name.com'
@@ -183,7 +183,7 @@ export default function Contact() {
               </div>
               <div className='input-container'>
                 <label htmlFor='Message' className={"label"}>
-                  Message
+                  Message*
                 </label>
                 <textarea
                   placeholder='Type your message....'
