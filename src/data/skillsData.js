@@ -3,11 +3,11 @@ export const skillsData = [
   "CSS",
   "Javascript",
   "React",
-  "NodeJS",
+  "Node.js",
   "MongoDB",
   "Python",
   "Django",
   "PostgreSQL",
   "Git",
-  "Material-UI",
+  "MUI",
 ];

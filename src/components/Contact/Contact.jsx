@@ -57,6 +57,12 @@ export default function Contact() {
     closeSnackbar(key);
   }
 
+  function resetForm() {
+    setName("");
+    setEmail("");
+    setMessage("");
+  }
+
   let handleChange = (e) => {
     e.preventDefault();
     let { name, value } = e.target;
@@ -72,14 +78,14 @@ export default function Contact() {
         setName(value);
         errorMessage =
           value.length < 3
-            ? openMessage("Enter your name", name)
+            ? openMessage("Please enter your name", name)
             : noErrorMessage(name);
 
         break;
       case "email":
         setEmail(value);
         errorMessage = !validEmailRegex.test(value)
-          ? openMessage("Enter a valid Email", name)
+          ? openMessage("Please enter a valid Email", name)
           : noErrorMessage(name);
 
         break;
@@ -121,16 +127,11 @@ export default function Contact() {
       })
       .then(
         (success) => {
-          console.log("fetch success");
-          console.log(success);
           setEmailSuccess(true);
           setLoading(false);
+          resetForm();
         },
         (error) => {
-          console.log("fetch fail");
-          console.log(error);
-          console.log("body" + error.body);
-
           setEmailSuccess(false);
           setLoading(false);
           openMessage(
@@ -140,8 +141,9 @@ export default function Contact() {
               title='Link to my LinkedIn page'>
               Something went Wrong. Please message me on <u>LinkedIn</u>
             </a>,
-            "email"
+            "fetchErr"
           );
+          resetForm();
         }
       );
   };
@@ -213,22 +215,11 @@ export default function Contact() {
                   <p>{!emailSuccess ? "Send" : "Sent"}</p>
                 )}
                 <div className='submit-icon'>
-                  <AiOutlineSend
-                    className='send-icon'
-                    style={{
-                      animation: !emailSuccess
-                        ? "initial"
-                        : "fly 0.8s linear both",
-                      position: emailSuccess ? "absolute" : "initial",
-                    }}
-                  />
-                  <AiOutlineCheckCircle
-                    className='success-icon'
-                    style={{
-                      display: emailSuccess ? "none" : "inline-flex",
-                      opacity: !emailSuccess ? "0" : "1",
-                    }}
-                  />
+                  {!emailSuccess ? (
+                    <AiOutlineSend className='send-icon' />
+                  ) : (
+                    <AiOutlineCheckCircle className='success-icon' />
+                  )}
                 </div>
               </ButtonBase>
             </form>

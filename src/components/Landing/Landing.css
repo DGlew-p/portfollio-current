@@ -271,13 +271,26 @@
 }
 
 @media  (max-width: 450px) {
+    .lcr-buttonContainer {
+        width: 100%;
+        height: fit-content;
+            display: flex;
+            flex-direction: row;
+            justify-content:space-around;
+        }
 
     .landing--button{
-        width: 125px;
-        height: 41.6px;
-        
-        
+        font-size: .75rem;
+        width: 100px;
+        height: 33px; 
     }
+           .lcr--content {
+               padding-top: 4rem;
+           }
+
+                   .lcr--content h1{
+                       font-size: 2rem;
+                   }
     
 }
 

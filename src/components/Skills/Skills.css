@@ -75,7 +75,6 @@
 .skill--icon{
     color:var(--primary);
     font-size: 1.25rem;
-   
     padding:.5rem
 }
 
@@ -120,9 +119,7 @@
         
     }
 
-    .skill--box>img {
-        height: 40px;
-    }
+  
 
     .skillsHeader h2 {
         font-size: 2.5rem;
@@ -138,4 +135,7 @@
     .skillsContainer{
         width: 100%;
     }
+        .skill--icon {
+            font-size: 1rem;
+        }
 }

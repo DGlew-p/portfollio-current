@@ -34,7 +34,7 @@ export const skillsIcon = (skill) => {
       return <FaHtml5 />;
     case "Javascript":
       return <SiJavascript />;
-    case "NodeJS":
+    case "Node.js":
       return <FaNodeJs />;
     case "Python":
       return <FaPython />;
@@ -51,7 +51,7 @@ export const skillsIcon = (skill) => {
     case "React":
       return <RiReactjsLine />;
 
-    case "Material-UI":
+    case "MUI":
       return <SiMaterialui />;
 
     default:
