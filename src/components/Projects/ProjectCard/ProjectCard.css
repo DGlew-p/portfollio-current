@@ -1,5 +1,4 @@
 .projectCard {
-   
     width: 304px;
     height: 360px;
     border-radius: 10px;
@@ -11,14 +10,16 @@
     position: relative;
     cursor: pointer;
     overflow: hidden;
-    background-color: var(--primary80);
+    background-color: var(--primary50);
+    box-shadow: 0px 3.3px 7px var(--primary);
+    
 }
 
 .projectContent {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
     height: 100%;
 }
@@ -27,10 +28,11 @@
     font-family: var(--primaryFont);
     font-style: normal;
     font-weight: 600;
-    font-size: 1.525rem;
+    font-size: 1.5rem;
     line-height: 110%;
     text-align: center;
     color: var(--tertiary);
+    transition: opacity 0.7s 0.3s;
 }
 
 .projectContent>img {
@@ -40,13 +42,16 @@
 }
 
 .projectCard:hover img {
-    opacity: 0;
+    opacity: 0.1;
+}
+.projectCard:hover h2 {
+    opacity: 0.1;
 }
 
 .project--showcaseBtn {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: flex-end;
     width: 100%;
     gap:10%
 }
@@ -60,7 +65,7 @@
 
 
 
-.projectCard .project--desc {
+.projectCard .project--desc--slide {
     position: absolute;
     width: 95%;
     height: 160px;
@@ -72,6 +77,8 @@
     transition: transform 0.9s;
     line-height: 110%;
     display: flex;
+    gap:1rem;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     font-family: var(--primaryFont);
@@ -79,8 +86,12 @@
     color: var(--tertiary);
 }
 
-.projectCard:hover .project--desc {
+.projectCard:hover .project--desc--slide {
     transform: translate(-2%, 40%);
+}
+
+.project--des{
+    display: flex;
 }
 
 .projectCard .project--lang {

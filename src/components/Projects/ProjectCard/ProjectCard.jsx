@@ -1,6 +1,7 @@
 import React from "react";
 
-import { FaPlay, FaCode } from "react-icons/fa";
+import { FaCode } from "react-icons/fa";
+import { BiLinkExternal } from "react-icons/bi";
 
 import "./ProjectCard.css";
 
@@ -18,6 +19,10 @@ export default function ProjectCard({
       <div className='projectContent'>
         <h2 id={name.replace(" ", "-").toLowerCase()}>{name}</h2>
         <img src={image} alt={name} />
+      </div>
+      <div className='project--desc--slide'>
+        <p className='project--desc'>{desc}</p>
+
         <div className='project--showcaseBtn'>
           <a
             href={demo}
@@ -27,7 +32,7 @@ export default function ProjectCard({
             aria-labelledby={`${name.replace(" ", "-").toLowerCase()} ${name
               .replace(" ", "-")
               .toLowerCase()}-demo`}>
-            <FaPlay
+            <BiLinkExternal
               id={`${name.replace(" ", "-").toLowerCase()}-demo`}
               className={"icon"}
               aria-label='Demo'
@@ -49,7 +54,7 @@ export default function ProjectCard({
           </a>
         </div>
       </div>
-      <p className='project--desc'>{desc}</p>
+
       <div className='project--lang'>
         {tags.map((tag, id) => (
           <span key={id}>{tag}</span>
