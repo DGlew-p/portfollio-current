@@ -86,34 +86,43 @@
     display: flex;
     flex-direction: column;
     justify-content:center;
-    gap: 2rem;
-    margin-top: 2em;
+    gap: 2.5rem;
     height: 100%;
     padding: 1rem;
 
 }
 
-.closebtnIcon{
-    font-size: 2rem !important;
-    cursor: pointer;
-    border: 3px solid var(--primary80);
-    border-radius: 50%;
-
+.close-container{
+   
+    
+    border-radius: 80px;
+    width: 200px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: var(--primary);
-    position: absolute ;
-    right:180px !important;
-    top: 30px !important;
-    transition: color 0.2s; 
+    border: 3px solid var(--primary80);
+    transition: 0.2s;
+    cursor: pointer;
+    justify-self: flex-start;
 }
 
- .closebtnIcon:hover {
+ .close-container:hover{
     background-color: var(--tertiary);
         color: var(--secondary);
  }
 
+ .closebtnIcon{
+    font-size: 2rem ;
+    border-radius: 50%;
+}
+
+
+
+
 
 .drawerItem {
-display: flex;
     margin:auto;
     flex-direction: row;
     border-radius: 80px; 
@@ -124,6 +133,7 @@ display: flex;
     justify-content: space-evenly;
     border: 3px solid var(--primary80);
     transition: 0.2s;
+    cursor: pointer;
     
 }
 
@@ -163,7 +173,6 @@ font-size:1.6rem !important;
 
     .nav-menu {
         font-size: 2.2rem;
-        margin-top: -1.5rem;
     }
 }
 
@@ -172,10 +181,7 @@ font-size:1.6rem !important;
         .navBar--extLink{
             color: var(--primary);
         }
-    .navLink--container {
-        margin-top: 3rem;
-        
-    }
+  
          .nav-menu {
             color: var(--primary);
          }
@@ -228,11 +234,14 @@ font-size:1.6rem !important;
     padding: 0 1rem;
 }
 
+.navLink--container{
+    gap: 1rem;
+    justify-content: flex-start;
+}
+
 .drawerItem {
-  
-    padding: 0 30px;
-    border: 3px solid var(--primary80);
- 
+    padding: 0 20px;
+
 }
 
 .drawerLinks{

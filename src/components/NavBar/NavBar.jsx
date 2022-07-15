@@ -6,7 +6,7 @@ import { MdConnectWithoutContact } from "react-icons/md";
 import { FaUser, FaLinkedin, FaGithub, FaCode } from "react-icons/fa";
 import Hide from "./HideLinkOnScroll.jsx";
 import { Drawer, AppBar } from "@mui/material";
-import CloseIcon from "@mui/icons-material/Close";
+import { AiOutlineCloseCircle } from "react-icons/ai";
 import { CgHome } from "react-icons/cg";
 import "./NavBar.css";
 import { extLinkData } from "../../data/extLinkData";
@@ -65,23 +65,25 @@ export default function Navbar(props) {
         className='MuiDrawer'
         disableScrollLock={true}
         variant='temporary'>
-        <div className='div-closebtn'>
-          <CloseIcon
+        <div className='navLink--container'>
+          <div
+            className='close-container'
             onClick={handleDrawerClose}
             onKeyDown={(e) => {
               if (e.key === " " || e.key === "Enter") {
                 e.preventDefault();
                 handleDrawerClose();
               }
-            }}
-            className='closebtnIcon'
-            role='button'
-            tabIndex='0'
-            aria-label='Close'
-          />
-        </div>
+            }}>
+            <div className='div-closebtn'>
+              <AiOutlineCloseCircle
+                className='closebtnIcon'
+                role='button'
+                aria-label='Close'
+              />
+            </div>
+          </div>
 
-        <div className='navLink--container'>
           <Link onClick={handleDrawerClose} to='landing' smooth={true}>
             <div className='drawerItem'>
               <span className='drawerLinks'>Home</span>
