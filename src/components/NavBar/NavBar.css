@@ -33,7 +33,7 @@
     justify-content: space-between;
     width: 100%;
     padding: 0 3rem;
-    margin-top: 1rem;
+   
     
 
 }
@@ -42,14 +42,11 @@
 
     width: 5%;
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
     font-size: 2em;
     gap: .5em;
-
-
 }
 .navBar--extLink{
+    display: flex;
     color: var(--secondary);
     transition: 250ms ease-in-out;
 }
@@ -191,9 +188,7 @@ border-radius: 50%;
   
 
 .MuiAppBar-root {
-   
     height: 3rem;
-
 }
         .MuiAppBar-root.MuiPaper-root {
             background-color:var(--secondary) !important;
@@ -206,37 +201,37 @@ border-radius: 50%;
 
 @media (max-width:650px) {
 
+.MuiAppBar-root {
+        height: 2.5rem;
+    }
+
 .navMenu {
-        font-size: 2rem;
-    
-        transition: color 0.3s;
+    font-size: 2rem;
+    transition: color 0.3s;
+}
+   .navMenu:hover {
+        color: var(--tertiary);
     }
-        .navMenu:hover {
-            color: var(--tertiary);
-        }
 
-    .MuiDrawer-paper {
-        border-radius: 0 !important;
-    }
+.nbc--content{
+    font-size: 1.5rem;
+    gap: 1.5rem;
+}
+
+.MuiDrawer-paper {
+    border-radius: 0 !important;
+}
 }
 
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) {
-    .navbar {
-        height: 5rem;
+@media  (max-width: 480px)  {
+  
+.MuiAppBar-root {
+        height: 2rem;
     }
 
-    .navbar--container {
-        padding: 0 1rem;
-        margin-top: 0rem;
-    }
-
-    .navbar--container>h1 {
-        font-size: 1.5rem;
-    }
+.navbar--container {
+    padding: 0 1rem;
+}
 }
 
-@media (max-height:800px) {
-
-
-}
