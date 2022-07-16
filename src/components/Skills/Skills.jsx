@@ -1,9 +1,10 @@
 import React from "react";
+import { Box } from "@mui/material";
 
 import { skillsData } from "../../data/skillsData";
-import { skillsIcon } from "../../data/iconData";
 
 import "./Skills.css";
+
 export default function Skills() {
   return (
     <div className='skills' id='skills'>
@@ -12,10 +13,18 @@ export default function Skills() {
       </div>
       <div className='skillsContainer'>
         {skillsData.map((skill, id) => (
-          <div className='skill--box' key={id}>
-            <h3>{skill}</h3>
-            <div className='skill--icon'>{skillsIcon(skill)}</div>
-          </div>
+          <Box
+            className='skill--box'
+            key={id}
+            sx={{
+              "&:hover": {
+                color: `${skill.color}`,
+                boxShadow: `0 0 10px ${skill.colorShadow}`,
+              },
+            }}>
+            <h3>{skill.name}</h3>
+            <div className='skill--icon'>{skill.icon}</div>
+          </Box>
         ))}
       </div>
     </div>

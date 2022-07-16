@@ -1,4 +1,5 @@
 .footer {
+    position: absolute;
     font-family: var(--primaryFont), sans-serif;
     height: 5vh;
     width: 100%;

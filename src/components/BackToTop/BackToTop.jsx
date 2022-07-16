@@ -27,7 +27,11 @@ export default function ScrollTop(props) {
   return (
     <Zoom in={trigger}>
       <Box onClick={handleClick} className={"BackToTop"} role='presentation'>
-        <KeyboardArrowUpIcon size='small' aria-label='scroll back to top' />
+        <KeyboardArrowUpIcon
+          className={"ArrowUpIcon"}
+          size='small'
+          aria-label='scroll back to top'
+        />
       </Box>
     </Zoom>
   );

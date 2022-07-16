@@ -1,12 +1,12 @@
-.MuiBox-root {
+.MuiBox-root>.ArrowUpIcon {
     position: fixed;
     display:flex;
     align-items: center;
     justify-content: center;
     right: 5%;
     bottom: 10%;
-    width: 2.5em;
-    height: 2.5em;
+    width: 1.5em;
+    height:1.5em;
     background-color: var(--primary80);
     border:2px solid var(--secondary70);
     color: var(--tertiary);
@@ -15,11 +15,12 @@
     transition: 300ms ease-in-out;
 }
 
-.MuiBox-root:hover{
+.MuiBox-root>.ArrowUpIcon:hover{
     color: var(--secondary);
     background-color: var(--tertiary);
 
 }
+
 
 
 
