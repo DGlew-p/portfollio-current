@@ -11,8 +11,8 @@
     cursor: pointer;
     overflow: hidden;
     background-color: var(--primary80);
-    border: 3spx solid var(--secondary);
-    box-shadow: inset 0px 0px 12px var(--tertiary);
+    border: 2px solid var(--secondary);
+    box-shadow: inset 0px 0px 5px var(--tertiary);
     transition: 0.3s 0.2s;
     
 }
@@ -46,10 +46,6 @@
 }
 
 
-.projectCard:hover{
-box-shadow: inset 0px 0px 12px var(--secondary);
-
-}
 .projectCard:hover img {
     opacity: 0.1;
 }
