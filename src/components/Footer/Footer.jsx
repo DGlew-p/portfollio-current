@@ -6,7 +6,7 @@ import { landingData } from "../../data/landingData";
 export default function Footer() {
   return (
     <div className='footer'>
-      <p>Made by {landingData.name}</p>
+      <p>Made by D.Glew</p>
     </div>
   );
 }
