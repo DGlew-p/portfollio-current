@@ -21,7 +21,7 @@
 
 .landing--img {
     display: flex;
-    --img-size: 600px;
+    --img-size: 500px;
     position: absolute;
     left: 35%;
     /* margin: 1rem; */
