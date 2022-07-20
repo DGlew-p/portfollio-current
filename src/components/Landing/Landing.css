@@ -206,7 +206,7 @@
 
     .landing--img {
      
-        --img-size: 200px;
+        --img-size: 225px;
         left: 50%;
         top: 30%;
         transform: translate(-50%, -50%);

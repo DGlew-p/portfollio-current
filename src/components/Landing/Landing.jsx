@@ -18,7 +18,14 @@ export default function Landing() {
     <div className='landing' id='back-to-top-anchor'>
       <div className='landing--container'>
         <div className='landing--container-left'></div>
-        <img src={landingData.image} alt='' className='landing--img' />
+        <img
+          srcSet={`${landingData.image} 500w, ${landingData.imageSM} 250w`}
+          sizes='(max-width: 750px) 250px,
+            500px'
+          src={landingData.image}
+          alt='Portrait of Darren Glew'
+          className='landing--img'
+        />
         <div className='landing--container-right'>
           <div className='lcr--content'>
             <h6>{landingData.title}</h6>
