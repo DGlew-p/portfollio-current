@@ -21,7 +21,7 @@
 
 .landing--img {
     display: flex;
-    --img-size: 600px;
+    --img-size: 500px;
     position: absolute;
     left: 35%;
     /* margin: 1rem; */
@@ -206,7 +206,7 @@
 
     .landing--img {
      
-        --img-size: 200px;
+        --img-size: 225px;
         left: 50%;
         top: 30%;
         transform: translate(-50%, -50%);
@@ -271,13 +271,26 @@
 }
 
 @media  (max-width: 450px) {
+    .lcr-buttonContainer {
+        width: 100%;
+        height: fit-content;
+            display: flex;
+            flex-direction: row;
+            justify-content:space-around;
+        }
 
     .landing--button{
-        width: 125px;
-        height: 41.6px;
-        
-        
+        font-size: .75rem;
+        width: 100px;
+        height: 33px; 
     }
+           .lcr--content {
+               padding-top: 4rem;
+           }
+
+                   .lcr--content h1{
+                       font-size: 2rem;
+                   }
     
 }
 

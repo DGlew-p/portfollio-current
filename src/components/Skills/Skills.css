@@ -42,7 +42,8 @@
 
 .skill--box {
     background-color: var(--secondary);
-    box-shadow: 0px 0px 20px var(--primary80);
+    color: var(--primary);
+    box-shadow: 0 0 10px var(--primary);
     border-radius: 10px;
     width: 125px;
     height: 125px;
@@ -55,27 +56,21 @@
     transition: 250ms ease-in-out;
 }
 
-.skill--box:hover {
-    transform: scale(1.1);
-}
-
 
 
 
 .skill--box h3 {
-    font-family: Big Shoulders Text;
+    font-family: var(--skillsFont);
     font-style: normal;
     font-weight: 500;
     font-size: 1.5em;
     text-align: center;
-    color: var(--tertiary80);
+   
    
 }
 
 .skill--icon{
-    color:var(--primary);
     font-size: 1.25rem;
-   
     padding:.5rem
 }
 
@@ -120,9 +115,7 @@
         
     }
 
-    .skill--box>img {
-        height: 40px;
-    }
+  
 
     .skillsHeader h2 {
         font-size: 2.5rem;
@@ -138,4 +131,7 @@
     .skillsContainer{
         width: 100%;
     }
+        .skill--icon {
+            font-size: 1rem;
+        }
 }

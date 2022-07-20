@@ -19,8 +19,8 @@
 
  .MuiPaper-root {
      background-color: var(--secondary) !important;
-     border-top-right-radius: 40px;
-     border-bottom-right-radius: 40px;
+     border-top-left-radius:30px;
+     border-bottom-left-radius: 30px;
 
    
  }
@@ -33,7 +33,7 @@
     justify-content: space-between;
     width: 100%;
     padding: 0 3rem;
-    margin-top: 1rem;
+   
     
 
 }
@@ -42,14 +42,11 @@
 
     width: 5%;
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
     font-size: 2em;
     gap: .5em;
-
-
 }
 .navBar--extLink{
+    display: flex;
     color: var(--secondary);
     transition: 250ms ease-in-out;
 }
@@ -81,56 +78,62 @@
 
 .MuiDrawer-root{
     overflow: hidden !important;
-    padding: 0em 1.8em !important;
-    width: 14em !important;
-   
-    border-top-right-radius: 40px !important;
-    border-bottom-right-radius: 40px;    
+    border-top-right-radius: 30px !important;
+    border-bottom-right-radius: 30px;    
 }
 
 .navLink--container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    margin-top: 2em;
+    justify-content:center;
+    gap: 2.5rem;
     height: 100%;
+    padding: 1rem;
 
 }
 
-.closebtnIcon{
-    font-size: 2rem !important;
-    cursor: pointer;
-    border: 3px solid var(--primary80);
-border-radius: 50%;
-
+.close-container{
+   
+    
+    border-radius: 80px;
+    width: 200px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: var(--primary);
-    position: absolute ;
-    right:30px !important;
-    top: 30px !important;
-    transition: color 0.2s; 
+    border: 3px solid var(--primary80);
+    transition: 0.2s;
+    cursor: pointer;
+    justify-self: flex-start;
 }
 
- .closebtnIcon:hover {
+ .close-container:hover{
     background-color: var(--tertiary);
         color: var(--secondary);
  }
 
+ .closebtnIcon{
+    font-size: 2rem ;
+    border-radius: 50%;
+}
+
+
+
+
 
 .drawerItem {
-
-    margin: 10% auto;
-    border-radius: 80px;
-    /* background:var(--secondary); */
-    color: var(--primary);
-    width: 85%;
-    height: 65%;
+    margin:auto;
+    flex-direction: row;
+    border-radius: 80px; 
+    width: 200px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    padding: 0 30px;
-    box-sizing: border-box;
     border: 3px solid var(--primary80);
     transition: 0.2s;
+    cursor: pointer;
     
 }
 
@@ -141,21 +144,19 @@ border-radius: 50%;
 
 
 .drawerLinks {
-
+display:flex;
+    width: 60%;
     font-family: var(--primaryFont);
-   width:60%;
+    flex-basis: 2;
     font-size: 1.2rem ;
     font-weight: 600;
-    margin: .5em
    
 }
 
 
 .drawerIcon {
-
-    font-size:1.6rem !important;
-  
-
+display: flex;
+font-size:1.6rem !important;
     
 }
 
@@ -172,7 +173,6 @@ border-radius: 50%;
 
     .nav-menu {
         font-size: 2.2rem;
-        margin-top: -1.5rem;
     }
 }
 
@@ -181,19 +181,14 @@ border-radius: 50%;
         .navBar--extLink{
             color: var(--primary);
         }
-    .navLink--container {
-        margin-top: 3rem;
-        
-    }
+  
          .nav-menu {
             color: var(--primary);
          }
   
 
 .MuiAppBar-root {
-   
     height: 3rem;
-
 }
         .MuiAppBar-root.MuiPaper-root {
             background-color:var(--secondary) !important;
@@ -206,37 +201,55 @@ border-radius: 50%;
 
 @media (max-width:650px) {
 
+.MuiAppBar-root {
+        height: 3rem;
+    }
+
 .navMenu {
-        font-size: 2rem;
-    
-        transition: color 0.3s;
+    font-size: 2rem;
+    transition: color 0.3s;
+}
+   .navMenu:hover {
+        color: var(--tertiary);
     }
-        .navMenu:hover {
-            color: var(--tertiary);
-        }
 
-    .MuiDrawer-paper {
-        border-radius: 0 !important;
-    }
+.nbc--content{
+    font-size: 1.75rem;
+    gap: 2rem;
+}
+
+.MuiDrawer-paper {
+    border-radius: 0 !important;
+}
 }
 
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) {
-    .navbar {
-        height: 5rem;
+@media  (max-width: 480px)  {
+  
+.MuiAppBar-root {
+        height: 2.5rem;
     }
 
-    .navbar--container {
-        padding: 0 1rem;
-        margin-top: 0rem;
-    }
-
-    .navbar--container>h1 {
-        font-size: 1.5rem;
-    }
+.navbar--container {
+    padding: 0 1rem;
 }
 
-@media (max-height:800px) {
+.navLink--container{
+    gap: 1rem;
+    justify-content: flex-start;
+}
 
+.drawerItem {
+    padding: 0 20px;
 
 }
+
+.drawerLinks{
+   font-size: 1rem;
+}
+
+.drawerIcon{
+    font-size: 1rem;
+}
+}
+

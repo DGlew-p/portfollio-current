@@ -1,6 +1,6 @@
 
 .contacts {
-    min-height: 95vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -169,13 +169,13 @@ form>.send--btn:disabled{
 }
 
 .label {
-    background-color: var(--secondary);
+    background-color: transparent;
     color: var(--tertiary70);
     font-family: var(--primaryFont);
     font-weight: 600;
     font-size: 0.9rem;
-    padding: 0 5px;
-    transform: translate(25px, 50%);
+    padding: 2px;
+    transform: translateX(20px);
     display: inline-flex;
 }
 
@@ -220,15 +220,7 @@ form>.send--btn:disabled{
     }
 
   
-/* .snackbar-close {
-    display:inline-flex;
-    color: inherit;
-    background-color: inherit;
-    border: none;
-    align-items: center;
-    padding: 0.5rem;
-   
-} */
+
 
 @media screen and (max-width: 1200px){
     .contacts-details {
@@ -289,19 +281,24 @@ form>.send--btn:disabled{
     }
 
     .contacts-details {
+        width: 100%;
         padding-left: 0rem;
         padding: 1rem;
+        flex-direction: row;
         align-items: center;
         margin-top: 2rem;
     }
 
     .personal-details {
         margin-bottom: 1.8rem;
+        flex-direction: column;
+        align-items: center;
     }
 
     .personal-details p {
-        margin-left: 1.2rem;
-        width: 100%;
+        margin-left: 0;
+        padding: .5rem;
+        text-align: center;
     }
 }
 

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { HashLink } from "react-router-hash-link";
 
 import { IoMenuSharp, IoSchoolSharp } from "react-icons/io5";
 import { BsBriefcase } from "react-icons/bs";
@@ -7,10 +6,12 @@ import { MdConnectWithoutContact } from "react-icons/md";
 import { FaUser, FaLinkedin, FaGithub, FaCode } from "react-icons/fa";
 import Hide from "./HideLinkOnScroll.jsx";
 import { Drawer, AppBar } from "@mui/material";
-import CloseIcon from "@mui/icons-material/Close";
-
+import { AiOutlineCloseCircle } from "react-icons/ai";
+import { CgHome } from "react-icons/cg";
 import "./NavBar.css";
 import { extLinkData } from "../../data/extLinkData";
+
+import { animateScroll as scroll, Link } from "react-scroll";
 
 export default function Navbar(props) {
   const [open, setOpen] = useState(false);
@@ -21,6 +22,11 @@ export default function Navbar(props) {
 
   const handleDrawerClose = () => {
     setOpen(false);
+  };
+
+  // eslint-disable-next-line
+  const scrollTo = () => {
+    scroll.scrollTo("scroll-to-element", {});
   };
 
   return (
@@ -54,62 +60,71 @@ export default function Navbar(props) {
             handleDrawerClose();
           }
         }}
-        anchor='left'
+        anchor='right'
         open={open}
         className='MuiDrawer'
         disableScrollLock={true}
         variant='temporary'>
-        <div className='div-closebtn'>
-          <CloseIcon
+        <div className='navLink--container'>
+          <div
+            className='close-container'
             onClick={handleDrawerClose}
             onKeyDown={(e) => {
               if (e.key === " " || e.key === "Enter") {
                 e.preventDefault();
                 handleDrawerClose();
               }
-            }}
-            className='closebtnIcon'
-            role='button'
-            tabIndex='0'
-            aria-label='Close'
-          />
-        </div>
+            }}>
+            <div className='div-closebtn'>
+              <AiOutlineCloseCircle
+                className='closebtnIcon'
+                role='button'
+                aria-label='Close'
+              />
+            </div>
+          </div>
 
-        <div className='navLink--container' onClick={handleDrawerClose}>
-          <HashLink smooth to='/#about'>
+          <Link onClick={handleDrawerClose} to='landing' smooth={true}>
             <div className='drawerItem'>
-              <FaUser className='drawerIcon' />
+              <span className='drawerLinks'>Home</span>
+              <CgHome className='drawerIcon' aria-label='scroll back to home' />
+            </div>
+          </Link>
+
+          <Link onClick={handleDrawerClose} to='about' smooth={true}>
+            <div className='drawerItem'>
               <span className='drawerLinks'>About</span>
+              <FaUser className='drawerIcon' />
             </div>
-          </HashLink>
+          </Link>
 
-          <HashLink smooth to='/#projects'>
+          <Link onClick={handleDrawerClose} to='projects' smooth={true}>
             <div className='drawerItem'>
-              <BsBriefcase className='drawerIcon' />
               <span className='drawerLinks'>Projects</span>
+              <BsBriefcase className='drawerIcon' />
             </div>
-          </HashLink>
+          </Link>
 
-          <HashLink smooth to='/#skills'>
+          <Link onClick={handleDrawerClose} to='skills' smooth={true}>
             <div className='drawerItem'>
-              <FaCode className='drawerIcon' />
               <span className='drawerLinks'>Skills</span>
+              <FaCode className='drawerIcon' />
             </div>
-          </HashLink>
+          </Link>
 
-          <HashLink smooth to='/#education'>
+          <Link onClick={handleDrawerClose} to='education' smooth={true}>
             <div className='drawerItem'>
-              <IoSchoolSharp className='drawerIcon' />
               <span className='drawerLinks'>Education</span>
+              <IoSchoolSharp className='drawerIcon' />
             </div>
-          </HashLink>
+          </Link>
 
-          <HashLink smooth to='/#contacts'>
+          <Link onClick={handleDrawerClose} to='contacts' smooth={true}>
             <div className='drawerItem'>
-              <MdConnectWithoutContact className='drawerIcon' />
               <span className='drawerLinks'>Contact</span>
+              <MdConnectWithoutContact className='drawerIcon' />
             </div>
-          </HashLink>
+          </Link>
         </div>
       </Drawer>
     </AppBar>

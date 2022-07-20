@@ -1,24 +1,26 @@
 .projectCard {
-   
-    width: 304px;
-    height: 360px;
+    width: 25pc;
+    height: 27pc;
     border-radius: 10px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem 1.5rem;
+  
+    padding: 1.5rem ;
     position: relative;
     cursor: pointer;
     overflow: hidden;
     background-color: var(--primary80);
+    border: 2px solid var(--secondary);
+    box-shadow: inset 0px 0px 5px var(--tertiary);
+    transition: 0.3s 0.2s;
+    
 }
 
 .projectContent {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    gap:2.5rem;
     width: 100%;
     height: 100%;
 }
@@ -27,26 +29,34 @@
     font-family: var(--primaryFont);
     font-style: normal;
     font-weight: 600;
-    font-size: 1.525rem;
+    font-size: 1.5rem;
     line-height: 110%;
     text-align: center;
     color: var(--tertiary);
+    text-shadow: 0px 0px 5px var(--secondary);
+    transition: opacity 0.7s 0.3s;
+   
 }
 
 .projectContent>img {
     width: 100%;
     height: 60%;
+    box-shadow: 0px 0px 2px var(--secondary);
     transition: opacity 0.7s 0.3s;
 }
 
+
 .projectCard:hover img {
-    opacity: 0;
+    opacity: 0.1;
+}
+.projectCard:hover h2 {
+    opacity: 0.1;
 }
 
 .project--showcaseBtn {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: flex-end;
     width: 100%;
     gap:10%
 }
@@ -60,7 +70,7 @@
 
 
 
-.projectCard .project--desc {
+.projectCard .project--desc--slide {
     position: absolute;
     width: 95%;
     height: 160px;
@@ -72,6 +82,8 @@
     transition: transform 0.9s;
     line-height: 110%;
     display: flex;
+    gap:1rem;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     font-family: var(--primaryFont);
@@ -79,8 +91,12 @@
     color: var(--tertiary);
 }
 
-.projectCard:hover .project--desc {
+.projectCard:hover .project--desc--slide {
     transform: translate(-2%, 40%);
+}
+
+.project--des{
+    display: flex;
 }
 
 .projectCard .project--lang {
@@ -139,6 +155,19 @@
                 
                }
 
+ @media screen and (max-width: 450px) {
 
-                
-                                
+.projectCard{
+
+        width: 20pc;
+        height: 25pc;
+         padding: .5rem;
+  
+    
+}
+       .projectContent>h2 {
+            font-size: 1.25rem;
+            margin-bottom: .25rem;
+            
+        }
+}
