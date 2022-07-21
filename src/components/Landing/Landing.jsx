@@ -36,7 +36,7 @@ export default function Landing() {
               {landingData.resumePdf && (
                 <a
                   href={landingData.resumePdf}
-                  download='resume'
+                  download='CV_DarrenGlew'
                   target='_blank'
                   rel='noreferrer'>
                   <ButtonBase className={"landing--button"}>
