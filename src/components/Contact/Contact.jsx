@@ -71,7 +71,7 @@ export default function Contact() {
       /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+.)+[^<>()[\].,;:\s@"]{2,3})$/i
     );
 
-    let errorMessage = null;
+    let errorMessage = null; // eslint-disable-line
 
     switch (name) {
       case "senderName":

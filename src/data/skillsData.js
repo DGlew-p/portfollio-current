@@ -1,11 +1,4 @@
-import {
-  FaHtml5,
-  FaCss3,
-  FaNodeJs,
-  FaPython,
-  FaGithub,
-  FaCode,
-} from "react-icons/fa";
+import { FaHtml5, FaCss3, FaNodeJs, FaPython, FaGithub } from "react-icons/fa";
 
 import { RiReactjsLine } from "react-icons/ri";
 import {
