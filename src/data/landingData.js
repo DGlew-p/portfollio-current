@@ -1,4 +1,4 @@
-import resume from "../assets/pdf/CDPdf.pdf";
+import resume from "../assets/pdf/CVDarrenGlew.pdf";
 import headshot from "../assets/jpg/headshot.jpg";
 import headshotSM from "../assets/jpg/headshotSM.jpg";
 
