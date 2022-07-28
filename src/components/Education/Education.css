@@ -37,7 +37,7 @@
     align-items: flex-start;
     justify-content: flex-start;
     width: 90%;
-    height: 140px;
+  
     padding: 1.5rem;
     border-radius: 20px;
     margin-bottom: 1.5rem;
@@ -45,11 +45,16 @@
     background-color:var(primary30);
 
 }
-.education-card:hover{
-            background-color: var(--primary50);
-      
+
+.education-card:hover {
+    background-color: var(--primary50);
 }
 
+.education-card:hover *.hide{
+    padding: auto;
+    display:inline-flex;
+    flex-direction: column;
+}
 
 
 .educard-img {
@@ -94,6 +99,22 @@
     font-weight: 600;
     color: var(--tertiary80);
 }
+
+.education-details{
+    font-family: var(--primaryFont);
+        font-size: 1rem;
+        font-weight: 400;
+        color: var(--tertiary80);
+}
+
+.hide {
+    display: none;
+}
+
+/* .education-details:hover>.hide {
+    display: block;
+    
+} */
 
 .education-image {
     box-sizing: border-box;

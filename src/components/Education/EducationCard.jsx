@@ -8,6 +8,7 @@ export default function EducationCard({
   course,
   startYear,
   endYear,
+  edDetails,
 }) {
   return (
     <div key={id} className={`education-card`}>
@@ -19,6 +20,11 @@ export default function EducationCard({
         </h6>
         <h4>{course}</h4>
         <h5>{school}</h5>
+        <ul className='hide'>
+          {edDetails.map((det) => (
+            <li>{det}</li>
+          ))}
+        </ul>
       </div>
     </div>
   );

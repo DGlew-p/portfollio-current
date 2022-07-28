@@ -19,6 +19,7 @@ export default function Education() {
               course={edu.course}
               startYear={edu.startYear}
               endYear={edu.endYear}
+              edDetails={edu.edDetails}
             />
           ))}
         </div>

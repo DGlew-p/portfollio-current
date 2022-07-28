@@ -17,7 +17,7 @@ export const projectsData = [
     projectName: "/your-space/",
     projectDesc:
       "What does the future of workspace look like? A remote-friendly solution to schedule time in the office.",
-    tags: ["python", "Django", "AWS S3"],
+    tags: ["python", "Django", "PostgreSQL", "AWS S3"],
     code: "https://github.com/DGlew-p/Progect-3/tree/development",
     demo: "https://your-spaces.herokuapp.com/",
     image: two,
