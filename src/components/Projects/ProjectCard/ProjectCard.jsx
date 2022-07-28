@@ -18,7 +18,7 @@ export default function ProjectCard({
     <div key={id} className='projectCard'>
       <div className='projectContent'>
         <h2 id={name.replace(" ", "-").toLowerCase()}>{name}</h2>
-        <img src={image} alt={name} />
+        <img src={image} alt={name} loading='lazy' />
       </div>
       <div className='project--desc--slide'>
         <p className='project--desc'>{desc}</p>
@@ -29,9 +29,7 @@ export default function ProjectCard({
             target='_blank'
             rel='noreferrer'
             className={"iconBtn"}
-            aria-labelledby={`${name.replace(" ", "-").toLowerCase()} ${name
-              .replace(" ", "-")
-              .toLowerCase()}-demo`}>
+            aria-labelledby={`${name.replace(" ", "-").toLowerCase()}-demo`}>
             <BiLinkExternal
               id={`${name.replace(" ", "-").toLowerCase()}-demo`}
               className={"icon"}
@@ -43,9 +41,7 @@ export default function ProjectCard({
             target='_blank'
             rel='noreferrer'
             className={"iconBtn"}
-            aria-labelledby={`${name.replace(" ", "-").toLowerCase()} ${name
-              .replace(" ", "-")
-              .toLowerCase()}-code`}>
+            aria-labelledby={`${name.replace(" ", "-").toLowerCase()}-code`}>
             <FaCode
               id={`${name.replace(" ", "-").toLowerCase()}-code`}
               className={"icon"}

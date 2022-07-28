@@ -40,14 +40,24 @@
     padding: 1.5rem;
     border-radius: 20px;
     margin-bottom: 1.5rem;
-    transition: 400ms ease-in-out;
+    transition: 300ms ease-in-out;
     background-color:var(primary30);
 
 }
 
 .education-card:hover {
-    background-color: var(--primary50);
+    background-color: var(--primary80);
 }
+.education-card:hover>.educard-img{
+    background-color: var(--secondary70);
+    box-shadow: none;
+
+}
+
+.education-card:hover>.education-details>:nth-child(odd) {
+    color: var(--secondary);
+}
+
 
 .education-card:hover *.hide{
     display:inline-flex;
@@ -57,6 +67,8 @@
 .hide {
     display: none;
     color: var(--tertiary);
+    font-weight: 600;
+    text-shadow: 0px 0px .5px var(--secondary);
 }
 
 
@@ -68,7 +80,8 @@
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    background-color: var(--primary);
+    background-color: var(--primary80);
+    box-shadow: inset 0px 0px 23px var(--tertiary);
 }
 
 .educard-img>img {
@@ -82,32 +95,27 @@
 }
 
 .education-details>h6 {
-    font-family: var(--primaryFont);
     font-size: 0.85rem;
     font-weight: 700;
-    margin-bottom: 0.5rem;
     color: var(--primary);
 }
 
 .education-details>h4 {
-    font-family: var(--primaryFont);
     font-size: 1.225rem;
     font-weight: 600;
     color: var(--tertiary);
+    text-shadow: 0px 0px .5px var(--secondary);
 }
 
 .education-details>h5 {
-    font-family: var(--primaryFont);
     font-size: 1.15rem;
     font-weight: 600;
-    color: var(--tertiary80);
+    color: var(--primary);
 }
 
 .education-details{
     font-family: var(--primaryFont);
-        font-size: 1.15rem;
-        font-weight: 400;
-        color: var(--tertiary80);
+   
 }
 
 
@@ -117,17 +125,6 @@
 }
 
 
-.education-image {
-    box-sizing: border-box;
-    padding: 1rem;
-    flex: 0.35;
-    margin-top: 1rem;
-    pointer-events: none;
-}
-
-.education-image>img {
-    width: 100%;
-}
 
 
 
@@ -141,9 +138,6 @@
         min-height: 100%;
     }
 
-    .education-image {
-        display: none;
-    }
 
     .education-description {
         flex: 1;
@@ -190,7 +184,6 @@
 
     .education-details>h6 {
         font-size: 0.85rem;
-        margin-bottom: 0.45rem;
     }
 
     .education-details>h4 {
