@@ -11,9 +11,8 @@
 .footer p {
     font-weight: 500;
     font-family:var(--footerFont);
-    font-size: 30px;
-    color: var(--hiLight);
-}
+    font-size: 1.25rem;
+    color: var(--hiLight);}
 
 
 

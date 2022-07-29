@@ -21,8 +21,8 @@ export default function EducationCard({
         <h4>{course}</h4>
         <h5>{school}</h5>
         <ul className='hide'>
-          {edDetails.map((det) => (
-            <li>{det}</li>
+          {edDetails.map((det, index) => (
+            <li key={index}>{det}</li>
           ))}
         </ul>
       </div>
