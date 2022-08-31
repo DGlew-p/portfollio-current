@@ -12,7 +12,7 @@
         align-items: center;
         justify-content: center;
         width: 100%;
-        color: hsla(117, 56%, 49%, 0.702);
+      
 }
 
 .education-description {
@@ -31,6 +31,7 @@
     color:var(--primary)
 }
 
+
 .education-card {
     display: flex;
     flex-direction: row;
@@ -45,23 +46,37 @@
 
 }
 
-.education-card:hover {
+.education-card-open {
+        display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: flex-start;
+            width: 90%;
+            padding: 1.5rem;
+            border-radius: 20px;
+            margin-bottom: 1.5rem;
+            transition: 300ms ease-in-out;
     background-color: var(--primary80);
 }
-.education-card:hover>.educard-img{
+.educard-img-open{
+    border-radius: 50%;
+        width: 55px;
+        height: 55px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
     background-color: var(--secondary70);
     box-shadow: none;
 
 }
 
-.education-card:hover>.education-details>:nth-child(odd) {
-    color: var(--secondary);
-}
-
-
-.education-card:hover *.hide{
+.hide-open{
     display:inline-flex;
     flex-direction: column;
+    color: var(--tertiary);
+    font-weight: 600;
+    text-shadow: 0px 0px .5px var(--secondary)
 }
 
 .hide {
@@ -81,23 +96,35 @@
     justify-content: center;
     flex-shrink: 0;
     background-color: var(--primary80);
-    box-shadow: inset 0px 0px 23px var(--tertiary);
+    box-shadow: inset 0px 0px 23px var(--tertiary50);
+    transition: 300ms ease-in-out;
 }
 
-.educard-img>img {
-    width: 40px;
-    
+.educard-img:hover {
+background-color: var(--primary30);
+box-shadow: inset 0px 0px 13px var(--tertiary50);
 }
 
 .education-details {
     margin-left: 0.6rem;
-    
+    font-family: var(--primaryFont);
+}
+
+.education-details-open {
+    margin-left: 0.6rem;
+    font-family: var(--primaryFont);
 }
 
 .education-details>h6 {
     font-size: 0.85rem;
     font-weight: 700;
     color: var(--primary);
+}
+
+.education-details-open>h6 {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--secondary)
 }
 
 .education-details>h4 {
@@ -107,20 +134,28 @@
     text-shadow: 0px 0px .5px var(--secondary);
 }
 
+.education-details-open>h4 {
+    font-size: 1.225rem;
+    font-weight: 600;
+    color: var(--tertiary);
+    
+}
+
 .education-details>h5 {
     font-size: 1.15rem;
     font-weight: 600;
     color: var(--primary);
 }
 
-.education-details{
-    font-family: var(--primaryFont);
-   
+.education-details-open>h5 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--secondary)
 }
 
 
 
-.hide{
+.hide .hide-open{
     padding: .5rem .5rem 0 1.5rem;
 }
 
@@ -178,9 +213,7 @@
         height: 45px;
     }
 
-    .educard-img>img {
-        width: 30px;
-    }
+   
 
     .education-details>h6 {
         font-size: 0.85rem;
@@ -212,10 +245,15 @@
 }
 
 @media screen and (max-width: 450px) {
-    .hide{
+    .hide-open{
         padding: .25rem 0 0 0;
         font-weight: 550;
+        list-style-type: none
+    }
 
+    .educard-img-open{
+        width:25px;
+        height:25px;
     }
     
 }
