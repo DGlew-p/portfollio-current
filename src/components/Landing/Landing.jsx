@@ -33,17 +33,15 @@ export default function Landing() {
             <p>{landingData.desciption}</p>
 
             <div className='lcr-buttonContainer'>
-              {landingData.resumePdf && (
-                <a
-                  href={landingData.resumePdf}
-                  download='CV_DarrenGlew'
-                  target='_blank'
-                  rel='noreferrer'>
-                  <ButtonBase className={"landing--button"}>
-                    Download CV
-                  </ButtonBase>
-                </a>
-              )}
+              <ButtonBase
+                className={"landing--button"}
+                href={landingData.resumePdf}
+                download='CV_DarrenGlew'
+                target='_blank'
+                rel='noreferrer'
+              >Download CV</ButtonBase>
+          
+            
               <Link to='contacts' smooth={true}>
                 <ButtonBase className={"landing--button"}>Contact</ButtonBase>
               </Link>

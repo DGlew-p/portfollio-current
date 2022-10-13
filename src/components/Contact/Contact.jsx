@@ -245,6 +245,7 @@ export default function Contact() {
             </a>
             <a
               href={landingData.resumePdf}
+             download='CV_DarrenGlew'
               className='personal-details'
               target={"blank"}>
               <div className={"detailsIcon"}>
