@@ -70,17 +70,20 @@ export default function Contact() {
     const validEmailRegex = RegExp(
       /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+.)+[^<>()[\].,;:\s@"]{2,3})$/i
     );
-
+    
+    const validNameRegex =  RegExp(/^[A-Za-z]+( [A-Za-z]+){1,50}$/);
+    
+    const validMessageRegex = RegExp(/^\s*[\w!"'(),./:;?@~-]+(\s+[\w!"'(),./:;?@~-]+\s*){3,500}$/)
     let errorMessage = null; // eslint-disable-line
 
     switch (name) {
       case "senderName":
         setName(value);
         errorMessage =
-          value.length < 3
-            ? openMessage("Please enter your name", name)
+         !validNameRegex.test(value)
+            ? openMessage("Please enter your name. Letters only.", name)
             : noErrorMessage(name);
-
+     
         break;
       case "email":
         setEmail(value);
@@ -91,9 +94,8 @@ export default function Contact() {
         break;
       case "message":
         setMessage(value);
-        errorMessage =
-          value.length < 5
-            ? openMessage("Please leave a longer message", name)
+        errorMessage = !validMessageRegex.test(value)
+            ? openMessage("Please leave a longer message. Without special characters.", name)
             : noErrorMessage(name);
 
         break;

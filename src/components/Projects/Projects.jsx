@@ -1,8 +1,8 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { projectsData } from "../../data/projectsData";
-import { HiArrowRight } from "react-icons/hi";
+// import { HiArrowRight } from "react-icons/hi";
+// import { Link } from "react-router-dom";
 
+import React from "react";
+import { projectsData } from "../../data/projectsData";
 import ProjectCard from "./ProjectCard/ProjectCard";
 import "./Projects.css";
 export default function Projects() {
@@ -15,7 +15,8 @@ export default function Projects() {
           </div>
           <div className='projects--body'>
             <div className='projects--bodyContainer'>
-              {projectsData.slice(0, 3).map((project) => (
+              {projectsData.map((project) => (
+                // projectsData.slice(0, 3).map // future dev
                 <ProjectCard
                   key={project.id}
                   id={project.id}
@@ -28,17 +29,17 @@ export default function Projects() {
                 />
               ))}
             </div>
-
-            {projectsData.length > 3 && (
+{/* future dev with more projects below */}
+            {/* {projectsData.length > 3 && (
               <div className='projects--viewAll'>
-                <Link to='/projects'>
+                <Link to='/AllProjects'>
                   <button className={"viewAllBtn"}>
                     View All
                     <HiArrowRight className={"viewArr"} />
                   </button>
                 </Link>
               </div>
-            )}
+            )} */}
           </div>
         </div>
       )}
