@@ -111,10 +111,10 @@ export default function Contact() {
     fetch("https://express-email-server.vercel.app/route/send", {
       method: "POST",
       mode:'no-cors',
-      // headers: {
-      //   "Content-Type": "application/json",
-      //   "Authorization": "Bearer ",
-      // },
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer ",
+      },
       body: JSON.stringify({
         name: name,
         email: email,
