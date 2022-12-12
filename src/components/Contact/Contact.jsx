@@ -108,11 +108,11 @@ export default function Contact() {
     e.preventDefault(e);
     setLoading(true);
 
-    fetch("https://express-email-server.vercel.app/route/send", {
+    fetch("https://express-email-dg.herokuapp.com/route/send", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": "Bearer ",
+        Authorization: "Bearer ",
       },
       body: JSON.stringify({
         name: name,
